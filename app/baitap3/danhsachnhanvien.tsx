@@ -30,6 +30,7 @@ export default function EmployeeList() {
     try {
       const response = await fetch("http://blackntt.net:88/api/v1/employees");
       const data = await response.json();
+      console.log(data);
       setEmployees(data);
     } catch (error) {
       console.error("Error fetching employees:", error);
